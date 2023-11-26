@@ -1,18 +1,132 @@
-*{
+@import url(animation.css);
+@import url(mediya.css);
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-ul{
-    padding: 0;
+
+ul {
+    padding: 0!important;
     margin: 0;
 }
-ul li{
+
+ul li {
     list-style-type: none;
 }
-p{
+
+p {
     padding: 0;
 }
-a{
-    text-decoration: none;
+
+a {
+    text-decoration: none !important;
+}
+
+:root {
+    --backgroundColor_500: #588157;
+    --backgroundColor_900: #9FCB23;
+    --text_color_200: #FEFBE2;
+    --font: 'Poppins', sans-serif;
+
+}
+
+/* download */
+.download {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--backgroundColor_500);
+    overflow: hidden;
+    position: relative;
+    display: none;
+    transition: all .3s ease;
+}
+.download.hide{
+    width: 0% !important;
+}
+
+.down_blok {
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 300px;
+    background-image: url(../icon/down_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.img_icon {
+    width: 250px;
+    height: 250px;
+    background-image: url(../icon/logo1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+download p {
+    position: absolute;
+    display: block;    font-family: var(--font);
+    color: var(--asosiy, #FEFBE2);
+    text-align: center;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5100;
+    width: 62%;
+}
+.img_icon #progressbar{
+    border: none;
+    padding: 0 !important;
+    width: 100px !important;    
+    height:  auto;
+    position: absolute;
+    left: 49%;
+    bottom: 0px;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+}
+.img_icon #progressbar .progress-label{
+    background-color: #A3B18A;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+.ui-progressbar-value{
+    /* border: 1px solid red !important; */
+    background-color: #A6C958 !important;
+    height: 8px !important;
+    padding-bottom: 2px;
+}
+.ui-progressbar{
+    overflow: hidden !important;
+}
+
+
+
+/* header */
+.header{
+    background-color: #588157;    
+}
+.header_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header_container ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_containe .navbar_button{
+    border: 1px solid red;
 }
